@@ -1,34 +1,20 @@
 import React from 'react'
-import Kuchipachi from './KuchipatchiFrontFacing.webp'
+import { BrowserRouter as Router, Routes, Route,  } from 'react-router-dom'
+import { PetList } from './pages/PetList'
+import { PetItemPage } from './pages/PetItemPage'
 
 export function App() {
   return (
-    <div>
+    <div className='app'>
       <h1>Fake Tamagotchi Site</h1>
-      <h2>Choose your pet</h2>
 
-      {/* Pet Menu component here*/}
-      <main>
-        <article>
-          <h3>Pet Name Here</h3>
-          <img src={Kuchipachi} alt="" /> 
-          <button className='pet-button'>Details</button>
-        </article>
-
-        <article>
-          <h3>Pet Name Here</h3>
-          <img src={Kuchipachi} alt="" /> 
-          <button className='pet-button'>Details</button>
-        </article>
-
-        <article>
-          <h3>Pet Name Here</h3>
-          <img src={Kuchipachi} alt="" /> 
-          <button className='pet-button'>Details</button>
-        </article>
-      </main>
-
-      <button>Make a New Pet</button>
+      <Router>
+        <Routes>
+            <Route path='/' element={<PetList/>} />
+            <Route path='/items/42' element={<PetItemPage/>}/>
+            <Route path='*' element={<p>Ooops, that URL is unknown.</p>}/>
+        </Routes>
+      </Router>
 
       <p>Give photo credits to Ema with link to insta</p>
 
