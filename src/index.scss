@@ -103,5 +103,14 @@ li, ul {
   justify-content: center;
 }
 
+.delete {
+    background-color: #F31559;
+    border-style: none;
+
+    &:hover{
+      background-color: #E21818;
+    }
+}
+
 
 

@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Routes, Route,  } from 'react-router-dom'
 import { PetList } from './pages/PetList'
 import { PetItemPage } from './pages/PetItemPage'
+import { GoodbyePetItemPage } from './pages/GoodbyePetItemPage'
 
 export function App() {
   return (
@@ -12,7 +13,7 @@ export function App() {
         <Routes>
             <Route path='/' element={<PetList/>} />
             <Route path='/items/42' element={<PetItemPage/>}/>
-            {/* <Route path='/items/delete/42' element={}/> */}
+            <Route path='/items/delete/42' element={<GoodbyePetItemPage/>}/>
             <Route path='*' element={<p>Ooops, that URL is unknown.</p>}/>
         </Routes>
       </Router>
