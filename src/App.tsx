@@ -12,6 +12,7 @@ export function App() {
         <Routes>
             <Route path='/' element={<PetList/>} />
             <Route path='/items/42' element={<PetItemPage/>}/>
+            {/* <Route path='/items/delete/42' element={}/> */}
             <Route path='*' element={<p>Ooops, that URL is unknown.</p>}/>
         </Routes>
       </Router>
