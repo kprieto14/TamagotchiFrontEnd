@@ -1,5 +1,6 @@
 import React from "react";
 import Kuchipachi from '../KuchipatchiFrontFacing.webp'
+import { Link } from "react-router-dom";
 
 export function PetItemPage() {
     function changeEmojiValue() {
@@ -32,8 +33,8 @@ export function PetItemPage() {
                 </div>
 
                 <div>
-                    <button>Home</button>
-                    <button>Delete</button>
+                    <Link to="/"><button>Home</button></Link>
+                    <Link to="/items/delete/42"><button>Delete</button></Link>
                 </div>
             </nav>
         </div>

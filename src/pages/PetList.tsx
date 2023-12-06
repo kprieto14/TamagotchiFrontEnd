@@ -1,5 +1,6 @@
 import React from "react"
 import Kuchipachi from '../KuchipatchiFrontFacing.webp'
+import { Link } from "react-router-dom"
 
 export function PetList() {
 
@@ -11,19 +12,19 @@ export function PetList() {
                 <article>
                     <h3>Pet Name Here</h3>
                     <img src={Kuchipachi} alt="" /> 
-                    <button className='pet-button'>Details</button>
+                    <Link to="/items/42"><button className='pet-button'>Details</button></Link>
                 </article>
 
                 <article>
                     <h3>Pet Name Here</h3>
                     <img src={Kuchipachi} alt="" /> 
-                    <button className='pet-button'>Details</button>
+                    <Link to="/items/42"><button className='pet-button'>Details</button></Link>
                 </article>
 
                 <article>
                     <h3>Pet Name Here</h3>
                     <img src={Kuchipachi} alt="" /> 
-                    <button className='pet-button'>Details</button>
+                    <Link to="/items/42"><button className='pet-button'>Details</button></Link>
                 </article>
             </main>
 

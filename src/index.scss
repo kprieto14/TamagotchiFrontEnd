@@ -44,17 +44,22 @@ article {
   align-items: center;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+
+  &:visited {
+    color: white;
+  }
+}
+
 button {
   background-color: #61A3BA;
   border: 2px solid #A2C579;
   border-radius: 1rem;
   color: white;
-  padding: .5rem;
+  padding: .60rem;
   font-size: 1rem;
-
-  &.pet-button {
-    width: 40%;
-  }
 
   &:hover {
     background-color: #A2C579;
