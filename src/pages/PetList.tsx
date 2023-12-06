@@ -1,6 +1,8 @@
 import React from "react"
 import Kuchipachi from '../KuchipatchiFrontFacing.webp'
+import pets from '../pets.json'
 import { Link } from "react-router-dom"
+import { PetItem } from "../components/PetItem"
 
 export function PetList() {
 
@@ -9,23 +11,14 @@ export function PetList() {
             <h2>Choose your pet</h2>
             
             <main>
-                <article>
-                    <h3>Pet Name Here</h3>
-                    <img src={Kuchipachi} alt="" /> 
-                    <Link to="/items/42"><button className='pet-button'>Details</button></Link>
-                </article>
-
-                <article>
-                    <h3>Pet Name Here</h3>
-                    <img src={Kuchipachi} alt="" /> 
-                    <Link to="/items/42"><button className='pet-button'>Details</button></Link>
-                </article>
-
-                <article>
-                    <h3>Pet Name Here</h3>
-                    <img src={Kuchipachi} alt="" /> 
-                    <Link to="/items/42"><button className='pet-button'>Details</button></Link>
-                </article>
+                {pets.map(pet => (
+                    <PetItem
+                        id={pet.id}
+                        name={pet.name}
+                        hungerLevel={pet.hungerLevel}
+                        happinessLevel={pet.happinessLevel}
+                    />
+                ))}
             </main>
 
             <button>Make a New Pet</button>

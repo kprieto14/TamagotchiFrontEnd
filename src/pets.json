@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Pikachu",
+        "birthday": "2023-05-18T21:51:17.506895",
+        "hungerLevel": 3,
+        "happinessLevel": 10,
+        "playtimes": null,
+        "feedings": null,
+        "scoldings": null
+    }, 
+    {
+        "id": 2,
+        "name": "Eevee",
+        "birthday": "2023-05-18T21:51:17.506895",
+        "hungerLevel": 3,
+        "happinessLevel": 10,
+        "playtimes": null,
+        "feedings": null,
+        "scoldings": null
+    },
+    {
+        "id": 3,
+        "name": "Espeon",
+        "birthday": "2023-05-18T21:51:17.506895",
+        "hungerLevel": 3,
+        "happinessLevel": 10,
+        "playtimes": null,
+        "feedings": null,
+        "scoldings": null
+    }
+]
