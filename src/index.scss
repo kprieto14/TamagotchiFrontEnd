@@ -73,6 +73,11 @@ button {
   }
 }
 
+img {
+  max-width: 15rem;
+  filter: drop-shadow(.5rem .5rem .5rem grey);
+}
+
 nav div {
   display: flex;
   gap: 1rem;

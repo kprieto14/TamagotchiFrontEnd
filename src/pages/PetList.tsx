@@ -1,7 +1,6 @@
 import React from "react"
-import Kuchipachi from '../KuchipatchiFrontFacing.webp'
 import pets from '../pets.json'
-import { Link } from "react-router-dom"
+// import { Link } from "react-router-dom"
 import { PetItem } from "../components/PetItem"
 
 export function PetList() {
@@ -13,10 +12,12 @@ export function PetList() {
             <main>
                 {pets.map(pet => (
                     <PetItem
+                        key={pet.id}
                         id={pet.id}
                         name={pet.name}
                         hungerLevel={pet.hungerLevel}
                         happinessLevel={pet.happinessLevel}
+                        breed={pet.breed}
                     />
                 ))}
             </main>
