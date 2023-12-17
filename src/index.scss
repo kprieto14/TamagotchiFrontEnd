@@ -1,6 +1,6 @@
 :root {
   font: 16px / 1 sans-serif;
-  background-color: #FFFFDD;
+  background-color: #F1EBF5;
 }
 
 html {
@@ -29,11 +29,11 @@ h3 {
 
 main {
   display: flex;
-  gap: 2rem;
+  gap: 2.5rem;
   max-width: 55rem;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 2rem 0rem;
+  padding: 4rem 1rem;
 }
 
 article {
@@ -120,6 +120,10 @@ li, ul {
     &:hover{
       background-color: #E21818;
     }
+}
+
+.invisible {
+  display: none;
 }
 
 

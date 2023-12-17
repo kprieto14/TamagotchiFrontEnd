@@ -4,6 +4,15 @@ import { PetList } from './pages/PetList'
 import { PetItemPage } from './pages/PetItemPage'
 import { GoodbyePetItemPage } from './pages/GoodbyePetItemPage'
 
+export type PetItemType = {
+  id: number | undefined
+  name: string
+  birthday: string
+  hungerLevel: number
+  happinessLevel: number
+  breed: string
+}
+
 export function App() {
   return (
     <div className='app'>
@@ -12,8 +21,8 @@ export function App() {
       <Router>
         <Routes>
             <Route path='/' element={<PetList/>} />
-            <Route path='/items/42' element={<PetItemPage/>}/>
-            <Route path='/items/delete/42' element={<GoodbyePetItemPage/>}/>
+            <Route path='/items/:id' element={<PetItemPage/>}/>
+            <Route path='/items/delete/:id' element={<GoodbyePetItemPage/>}/>
             <Route path='*' element={<p>Ooops, that URL is unknown.</p>}/>
         </Routes>
       </Router>

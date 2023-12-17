@@ -15,6 +15,7 @@ export function PetList() {
                         key={pet.id}
                         id={pet.id}
                         name={pet.name}
+                        birthday={pet.birthday}
                         hungerLevel={pet.hungerLevel}
                         happinessLevel={pet.happinessLevel}
                         breed={pet.breed}
