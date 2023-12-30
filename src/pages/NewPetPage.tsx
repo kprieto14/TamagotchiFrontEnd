@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import BenshisIdle from '../assets/Benshis/Idle.png'
-import MoomisIdle from '../assets/Moomis/Idle.png'
-import PooshisIdle from '../assets/Pooshis/Idle.png'
+import BenshisIdle from '../assets/BenshisIdle.png'
+import MoomisIdle from '../assets/MoomisIdle.png'
+import PooshisIdle from '../assets/PooshisIdle.png'
 import petNames from '../pet-names.json'
 import { Link } from "react-router-dom";
 
@@ -16,6 +16,11 @@ export function NewPetPage() {
     function handleNewPet() {
         let newPetName = petName
         //Code here to handle API to create new pet
+        if(petName === '') {
+            setSubText('Please name your pet')
+            return
+        }
+        
         setNewPetCreated(true)
         setSubText(`Welcome ${newPetName} to the digital world!`)
     }

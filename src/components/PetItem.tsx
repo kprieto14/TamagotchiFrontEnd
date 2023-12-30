@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Benshis from '../assets/Benshis/Idle.png'
-import Moomis from '../assets/Moomis/Idle.png'
-import Pooshis from '../assets/Pooshis/Idle.png'
+import Benshis from '../assets/BenshisIdle.png'
+import Moomis from '../assets/MoomisIdle.png'
+import Pooshis from '../assets/PooshisIdle.png'
 import { PetItemType } from "../App";
 
 export function PetItem(props: PetItemType) {

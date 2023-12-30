@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { PetItemType } from "../App";
-import BenshisEating from '../assets/Benshis/Eating.png'
-import BenshisIdle from '../assets/Benshis/Idle.png'
-import BenshisPlaying from '../assets/Benshis/Playing.png'
-import BenshisSad from '../assets/Benshis/Sad.png'
-import MoomisEating from '../assets/Moomis/Eating.png'
-import MoomisIdle from '../assets/Moomis/Idle.png'
-import MoomisPlaying from '../assets/Moomis/Playing.png'
-import MoomisSad from '../assets/Moomis/Sad.png'
-import PooshisEating from '../assets/Pooshis/Eating.png'
-import PooshisIdle from '../assets/Pooshis/Idle.png'
-import PooshisPlaying from '../assets/Pooshis/Playing.png'
-import PooshisSad from '../assets/Pooshis/Sad.png'
+import BenshisEating from '../assets/BenshisEating.png'
+import BenshisIdle from '../assets/BenshisIdle.png'
+import BenshisPlaying from '../assets/BenshisPlaying.png'
+import BenshisSad from '../assets/BenshisSad.png'
+import MoomisEating from '../assets/MoomisEating.png'
+import MoomisIdle from '../assets/MoomisIdle.png'
+import MoomisPlaying from '../assets/MoomisPlaying.png'
+import MoomisSad from '../assets/MoomisSad.png'
+import PooshisEating from '../assets/PooshisEating.png'
+import PooshisIdle from '../assets/PooshisIdle.png'
+import PooshisPlaying from '../assets/PooshisPlaying.png'
+import PooshisSad from '../assets/PooshisSad.png'
 import pets from "../pets.json"
 
 export function PetItemPage() {

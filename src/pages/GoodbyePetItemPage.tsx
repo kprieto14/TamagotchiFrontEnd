@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { PetItemType } from "../App";
-import BenshisSad from '../assets/Benshis/Sad.png'
-import MoomisSad from '../assets/Moomis/Sad.png'
-import PooshisSad from '../assets/Pooshis/Sad.png'
-import GoodbyeBenshis from '../assets/Benshis/Goodbye.png'
-import GoodbyeMoomis from '../assets/Moomis/Goodbye.png'
-import GoodbyePooshis from '../assets/Pooshis/Goodbye.png'
+import BenshisSad from '../assets/BenshisSad.png'
+import MoomisSad from '../assets/MoomisSad.png'
+import PooshisSad from '../assets/PooshisSad.png'
+import GoodbyeBenshis from '../assets/BenshisGoodbye.png'
+import GoodbyeMoomis from '../assets/MoomisGoodbye.png'
+import GoodbyePooshis from '../assets/PooshisGoodbye.png'
 import pets from "../pets.json"
 
 export function GoodbyePetItemPage() {
