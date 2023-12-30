@@ -10,6 +10,15 @@ export function NewPetPage() {
 
     const [ petName, setPetName ] = useState<string>(petNames[0])
     const [ petPicture, setPetPicture ] = useState<string | undefined>(petPictures[0])
+    const [ newPetCreated, setNewPetCreated ] =useState<boolean>(false)
+    const [ subtext, setSubText ] = useState<string>('What would you like to do?')
+
+    function handleNewPet() {
+        let newPetName = petName
+        //Code here to handle API to create new pet
+        setNewPetCreated(true)
+        setSubText(`Welcome ${newPetName} to the digital world!`)
+    }
 
     return (
         <div>
@@ -36,11 +45,12 @@ export function NewPetPage() {
             </main>
 
             <nav>
-                <h3>What would you like to do?</h3>
+                <h3>{subtext}</h3>
 
                 <div>
                     <Link to="/"><button>Home</button></Link>
-                    <button>Create</button>
+                    <button onClick={handleNewPet} className={newPetCreated ? 'invisible' : undefined}>Create</button>
+                    {/* Link here that will go directly to new pet page */}
                 </div>
             </nav>
         </div>

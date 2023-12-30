@@ -36,23 +36,15 @@ export function GoodbyePetItemPage() {
         setPetPicture(sadPictures.find(breed => breed.includes(chosenPet.breed)))
     }, [params.id])
 
-    function deletePet() {
+    function handleDeletePet() {
         //Code here to request DELETE to API
         setPetPicture(goodByePictures.find(breed => breed.includes(petItem.breed)))
         setPictureDescription('Image of pixelated animal walking away')
         setPetIsGone(true)
     }
 
-    function newHeader() {
-        return `Good bye ${petItem.name}`
-    }
-
-    function newSubtext() {
-        return 'We will miss you :('
-    }
-
-    const header = petIsGone ? newHeader() : "Oh no!"
-    const subtext = petIsGone ? newSubtext() : `Are you sure you want to get rid of ${petItem.name} :(`
+    const header = petIsGone ? `Good bye ${petItem.name}` : "Oh no!"
+    const subtext = petIsGone ? 'We will miss you :(' : `Are you sure you want to get rid of ${petItem.name} :(`
     const link = petIsGone ? '/' : `/items/${params.id}`
 
     return (
@@ -68,7 +60,7 @@ export function GoodbyePetItemPage() {
 
                 <div>
                     <Link to={link}><button>BACK</button></Link>
-                    <button className={petIsGone ? 'invisible delete' : 'delete'} onClick={deletePet}>YES</button>
+                    <button className={petIsGone ? 'invisible delete' : 'delete'} onClick={handleDeletePet}>YES</button>
                 </div>
             </nav>
         </div>
