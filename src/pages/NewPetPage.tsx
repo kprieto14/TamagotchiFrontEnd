@@ -9,6 +9,7 @@ export function NewPetPage() {
     const petPictures = [ BenshisIdle, MoomisIdle, PooshisIdle ]
 
     const [ petName, setPetName ] = useState<string>(petNames[0])
+    const [ petPicture, setPetPicture ] = useState<string | undefined>(petPictures[0])
 
     return (
         <div>
@@ -16,14 +17,13 @@ export function NewPetPage() {
             
             <main>
                 <aside>
-                    <img src={petPictures[0]} alt='picture of a virtual pet' /> 
+                    <img src={petPicture} alt='picture of a virtual pet' /> 
                 </aside>
 
                 <ul className="pet-information">
-                    <li><label htmlFor="pet-select">Choose a pet:</label></li>
+                    <li><label htmlFor="pet-select">Select a breed:</label></li>
 
-                    <select name="pets" id="pet-select">
-                        <option value="">--Please choose an option--</option>
+                    <select name="pets" id="pet-select" onChange={e => setPetPicture(petPictures.find(breed => breed.includes(e.target.value)))}>
                         <option value="Benshi">Benshis</option>
                         <option value="Moomis">Moomis</option>
                         <option value="Pooshis">Pooshis</option>
@@ -31,7 +31,7 @@ export function NewPetPage() {
 
                     <li>Pet Name:</li>
                     <li><input type="text" placeholder={petName}/></li>
-                    <button onClick={() => setPetName(petNames[Math.round(Math.random() * 395)])}>Random Name</button>
+                    <button onClick={() => setPetName(petNames[Math.floor(Math.random() * 395)])}>Random Name</button>
                 </ul>
             </main>
 
