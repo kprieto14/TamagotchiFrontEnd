@@ -12,7 +12,7 @@ import pets from "../pets.json"
 export function GoodbyePetItemPage() {
     const params = useParams<{ id: string }>()
 
-    const [ petItem, setPetItem ] =useState<PetItemType>({
+    const [ petItem, setPetItem ] = useState<PetItemType>({
         id: undefined,
         name: '',
         birthday: '05/14/1992',

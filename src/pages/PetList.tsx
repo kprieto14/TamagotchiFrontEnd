@@ -2,6 +2,7 @@ import React from "react"
 import pets from '../pets.json'
 // import { Link } from "react-router-dom"
 import { PetItem } from "../components/PetItem"
+import { Link } from "react-router-dom"
 
 export function PetList() {
 
@@ -23,7 +24,7 @@ export function PetList() {
                 ))}
             </main>
 
-            <button>Make a New Pet</button>
+            <Link to={'/new'}><button>Make a New Pet</button></Link>
         </div>
     )
 }
