@@ -39,7 +39,7 @@ export function NewPetPage() {
                     </select>
 
                     <li>Pet Name:</li>
-                    <li><input type="text" placeholder={petName}/></li>
+                    <li><input type="text" onChange={e => setPetName(e.target.value)} value={petName}/></li>
                     <button onClick={() => setPetName(petNames[Math.floor(Math.random() * 395)])}>Random Name</button>
                 </ul>
             </main>
