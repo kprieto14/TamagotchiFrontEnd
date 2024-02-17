@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route,  } from 'react-router-dom'
+import { Routes, Route  } from 'react-router-dom'
 import { PetList } from './pages/PetList'
 import { PetItemPage } from './pages/PetItemPage'
 import { GoodbyePetItemPage } from './pages/GoodbyePetItemPage'
@@ -19,15 +19,13 @@ export function App() {
     <div className='app'>
       <h1>Fake Tamagotchi Site</h1>
 
-      <Router>
-        <Routes>
-            <Route path='/' element={<PetList/>} />
-            <Route path='/new' element={<NewPetPage/>} />
-            <Route path='/items/:id' element={<PetItemPage/>}/>
-            <Route path='/items/delete/:id' element={<GoodbyePetItemPage/>}/>
-            <Route path='*' element={<p>Ooops, that URL is unknown.</p>}/>
-        </Routes>
-      </Router>
+      <Routes>
+          <Route path='/' element={<PetList/>} />
+          <Route path='/new' element={<NewPetPage/>} />
+          <Route path='/items/:id' element={<PetItemPage/>}/>
+          <Route path='/items/delete/:id' element={<GoodbyePetItemPage/>}/>
+          <Route path='*' element={<p>Ooops, that URL is unknown.</p>}/>
+      </Routes>
 
       <p>All photos of pets were created by the lovely & talented, <a href="https://www.instagram.com/emitosauro/">Emitosauro</a></p>
 

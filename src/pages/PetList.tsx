@@ -1,6 +1,5 @@
 import React from "react"
 import pets from '../pets.json'
-// import { Link } from "react-router-dom"
 import { PetItem } from "../components/PetItem"
 import { Link } from "react-router-dom"
 
